@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:27017/monorepo';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://szeta03:sergio@clustermonorepo.evpnmfb.mongodb.net';
 mongoose.connect(MONGO_URI)
   .then(()=> console.log('MongoDB connected'))
   .catch(err => console.error('Mongo error', err));

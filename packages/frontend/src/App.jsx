@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 export default function App(){
   const [items, setItems] = useState([]);
   const [name,setName] = useState('');
-  const api = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+  const api = import.meta.env.VITE_API_URL || 'http://192.168.85.10:4000';
 
   useEffect(()=>{
     fetch(`${api}/api/items`).then(r=>r.json()).then(setItems).catch(console.error);
@@ -22,7 +22,7 @@ export default function App(){
 
   return (
     <div style={{padding:20}}>
-      <h1>Monorepo React + Express + MongoDB (Docker)</h1>
+      {/* <h1>Monorepo React + Express + MongoDB (Docker)</h1> */}
       <form onSubmit={handleAdd}>
         <input value={name} onChange={e=>setName(e.target.value)} placeholder="Nuevo item" />
         <button type="submit">Agregar</button>
