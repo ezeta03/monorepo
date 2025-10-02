@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-docker",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm --workspace=@app/frontend run dev\" \"npm --workspace=@app/backend run dev\"",
+    "start": "npm --workspace=@app/backend run start",
+    "build:frontend": "npm --workspace=@app/frontend run build",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
