@@ -19,7 +19,7 @@ const itemSchema = new mongoose.Schema({
 });
 const Item = mongoose.model('Item', itemSchema);
 
-app.get('/api/health', (req,res)=> res.json({status:'ok'}));
+app.get('/api/health', (req,res)=> res.json({status:'El sitio está funcionando'}));
 
 app.get('/api/items', async (req,res)=>{
   const items = await Item.find().sort({createdAt:-1}).limit(100);
