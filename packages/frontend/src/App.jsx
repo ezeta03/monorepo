@@ -22,7 +22,7 @@ export default function App(){
 
   return (
     <div style={{padding:20}}>
-      {/* <h1>Monorepo React + Express + MongoDB (Docker)</h1> */}
+      <h1>Monorepo React + Express + MongoDB (Docker)</h1>
       <form onSubmit={handleAdd}>
         <input value={name} onChange={e=>setName(e.target.value)} placeholder="Nuevo item" />
         <button type="submit">Agregar</button>
